@@ -1,0 +1,14 @@
+CREATE DATABASE dictionary;
+
+CREATE TABLE translation_eng (id int (11) NOT NULL AUTO_INCREMENT, german_word varchar (32), english_word varchar (32), PRIMARY KEY (id));
+
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Narbe", "scar");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Programmieren", "programming");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Geschichte", "history");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Verlauf", "course");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Sprache", "language");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Rede", "speech");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Wörterbuch", "dictionary");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Übersetzung", "translation");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Abkürzung", "shortcut");
+INSERT INTO translation_eng (german_word, english_word) VALUES ("Datenbank", "database");
