@@ -1,0 +1,114 @@
+@import "config";
+
+header {
+    .navbar {
+        height: 3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+
+        background-color: #ccc;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        li {
+            padding: 0 1em;
+        }
+
+        .logo {
+            background-image: url('../images/logo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 64px;
+            height: 64px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+    }
+
+    a:hover {
+        color: $secondary-color;
+    }
+}
+
+.showcase {
+
+
+    &__content {
+
+        background-color: $primary-color;
+
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em;
+
+        .article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2em 0;
+            background-color: $secondary-color;
+            padding: 2em;
+            height: 100vh;
+
+
+            img {
+                width: 100%;
+                padding: 0 2em;
+            }
+
+            .image {
+                width: 100%;
+
+                padding: 2em 0;
+
+                background-image: url('../images/01-startseite/first_image.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+
+            .text {
+                line-height: 1.5;
+                font-size: 0.8em;
+            }
+
+            p {
+                margin: 1em 0;
+            }
+
+        }
+
+        .quote {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color: $tertiary-color;
+            height: 25vh;
+            padding: 2em;
+        }
+    }
+}
+
+
+
+
+@import "utilities";
+@import "buttons";
+@import "tablet";
+@import "desktop";

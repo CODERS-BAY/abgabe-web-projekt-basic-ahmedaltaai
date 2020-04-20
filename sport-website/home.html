@@ -1,326 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- native CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-
-    <title>Hello, world!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
 </head>
 
 <body>
     <header>
-        <!-- NAVIGATION -->
-        <div class="blue-bar container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light container">
-                <a class="navbar-brand" href="home.html">LOGO</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="smm.html">SMM</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="running.html">Running</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gym.html">Gym</a>
-                        </li>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-info ml-4" data-toggle="modal" data-target="#exampleModal">
-                            Contact
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="form-horizontal" role="form">
-                                            <div class="form-group">
-                                                <label for="name" class="col-sm-2 control-label">Name</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="name" name="name"
-                                                        placeholder="First & Last Name" value="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email" class="col-sm-2 control-label">Email</label>
-                                                <div class="col-sm-10">
-                                                    <input type="email" class="form-control" id="email" name="email"
-                                                        placeholder="example@domain.com" value="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="message" class="col-sm-2 control-label">Message</label>
-                                                <div class="col-sm-10">
-                                                    <textarea placeholder="your message..." class="form-control"
-                                                        rows="4" name="message"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-sm-10 col-sm-offset-2">
-                                                    <input id="submit" name="submit" type="submit" value="Send"
-                                                        class="btn btn-primary">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <nav class="navbar">
+            <div class="logo"></div>
+            <ul class="navbar__list">
+                <li><a href="#" class="navbar__links">one</a></li>
+                <li><a href="#" class="navbar__links">two</a></li>
+                <li><a href="#" class="navbar__links">three</a></li>
+                <li><a href="#" class="navbar__links">four</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <!-- title image -->
-        <div class="title-img"></div>
-
-        <!-- second navbar -->
-        <div class="second-navbar" id="navbar">
-            <a class="active-sec" href="home.html">Home</a>
-            <a href="smm.html">SMM</a>
-            <a href="running.html">Running</a>
-            <a href="gym.html">Gym</a>
-        </div>
-
-        <section>
-
-            <!-- jumbotron -->
-            <article>
-                <div class="jumbotron text-center text-size">
-                    <h1 class="display-4 ">Sports can bring positive results to one's physical health.</h1>
-                    <p class="lead">Sport includes all forms of competitive physical activity or games which, through
-                        casual
-                        or
-                        organized participation, at least in part aim to use, maintain or improve physical ability and
-                        skills
-                        while
-                        providing enjoyment to participants, and in some cases, entertainment for spectators.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger
-                        container.
+    <main class="showcase">
+        <section class="showcase__content">
+            <h1>Jetzt! Gesünder sein</h1>
+            <!-- ARTICLE -->
+            <article class="article">
+                <div class="text">
+                    <p>
+                        Tägliche Bewegung, einst nur notwendiges Übel des Urmenschen, der im kargen Alltag ständig
+                        Nahrung
+                        suchen, kämpfen oder fliehen musste, ist für den modernen Menschen das Geheimrezept schlechthin
+                        für
+                        besseres Wohlbefinden.
                     </p>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                </div>
+                <div class="image">
+                    <!-- <img src="./images/01-startseite/first_image.jpg" alt="daily movement is the healthiest"> -->
                 </div>
             </article>
 
-            <!-- cards -->
-            <article>
-                <div class="card-deck container mx-auto my-3">
-                    <div class="card">
-                        <img src="images/mobility-training.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Simplistic Mobility Method</h5>
-                            <p class="card-text">No equipment needed. Nothing fancy. No big words. Just great drills
-                                with
-                                simple explanations. It is designed to make you aware of any postural or strength
-                                imbalances
-                                you may have.</p>
-                            <a href="smm.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/marathon.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Running</h5>
-                            <p class="card-text">Running is the way in which people or animals travel quickly on their
-                                feet.
-                                Different terms are used to refer to running according to the speed: jogging is slow,
-                                and
-                                sprinting is running fast.
-                            </p>
-                            <a href="running.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/at-the-gym.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Weight lifting</h5>
-                            <p class="card-text">Weight training is a common type of strength training for developing
-                                the
-                                strength and size of skeletal muscles. It utilizes the force of gravity in the form of
-                                weighted bars.
-                            </p>
-                            <a href="gym.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
+            <!-- QUOTE -->
+            <article class="quote">
+                <p>"If it doesn´t challenge you, it doesn´t change you."</p>
+                <p>— Fred Devito</p>
+            </article>
+
+            <!-- ARTICLE -->
+            <article class="article">
+                <img src="./images/01-startseite/second_image.jpg" alt="sport is the best medicine">
+                <div class="text">
+                    <p>
+                        Die Folgen von Bewegungsmangel und den viel gepriesenen Satz „Sport ist die beste Medizin“
+                        kennen
+                        wir alle!
+                    </p>
+                    <p>
+                        Übergewicht , Diabetes, Gefäßerkrankungen, Osteoporose aber auch Sturzgefahr können durch
+                        regelmäßiges Training wunderbar in die Schranken gewiesen werden.
+                    </p>
                 </div>
             </article>
 
+            <!-- QUOTE -->
+            <article class="quote">
+                <p>"Eine winzige Veränderung heute bringt ein dramatisch Verändertes morgen."</p>
+                <p>— Richard Bach</p>
+            </article>
+
+            <!-- ARTICLE -->
+            <article class="article">
+                <div class="text">
+                    <p>
+                        Aber wann damit anfangen? Die klare Antwort ist JETZT!
+                    </p>
+                    <p>
+                        Ob du noch jung bist oder schon deine Lebensmitte überschritten hast spielt dabei keine Rolle!
+                    </p>
+                </div>
+                <img src="./images/01-startseite/third_image.jpg" alt="when to start athletic sport and movement">
+            </article>
+
+            <!-- QUOTE -->
+            <article class="quote">
+                <p>"Sometimes life hits you in the head with a brick. Don’t lose faith."</p>
+                <p>— Steve Jobs</p>
+            </article>
+
+            <!-- ARTICLE -->
+            <article class="article">
+                <img src="./images/01-startseite/fourth_image.jpg"
+                    alt="get regular movement and sport will become an amusement">
+                <div class="text">
+                    <p>
+                        Regelmäßiges Training ist deiner Gesundheit immer zuträglich, kann bei vielen chronischen
+                        Erkrankungen die Selbstheilungskräfte des Körpers ankurbeln und wirkt sich auf Körper & Geist
+                        auf jeden Fall positiv aus.
+                    </p>
+                </div>
+            </article>
+
+            <!-- QUOTE -->
+            <article class="quote">
+                <p>"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren."</p>
+                <p>— Bertolt Brecht</p>
+            </article>
+
+            <!-- ARTICLE -->
+            <article class="article">
+                <div class="text">
+                    <h1>
+                        In welchem körperlichen Zustand oder Alter auch immer du bist – es ist nie zu spät anzufangen!
+                    </h1>
+                </div>
+            </article>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="page-footer font-small unique-color-dark">
-
-        <div class="blue-stripe-footer">
-            <div class="container">
-
-                <!-- Grid row-->
-                <div class="row py-4 d-flex align-items-center">
-
-                    <!-- Grid column -->
-                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0 container">
-                        <h6 class="mb-0">Get connected with us on social networks!</h6>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-                        <!-- Facebook -->
-                        <a class="fb-ic">
-                            <i class="fab fa-facebook-f white-text mr-4"> </i>
-                        </a>
-                        <!-- Twitter -->
-                        <a class="tw-ic">
-                            <i class="fab fa-twitter white-text mr-4"> </i>
-                        </a>
-                        <!-- Google +-->
-                        <a class="gplus-ic">
-                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
-                        </a>
-                        <!--Linkedin -->
-                        <a class="li-ic">
-                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
-                        </a>
-                        <!--Instagram-->
-                        <a class="ins-ic">
-                            <i class="fab fa-instagram white-text"> </i>
-                        </a>
-
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row-->
-
-            </div>
-        </div>
-
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left mt-5">
-
-            <!-- Grid row -->
-            <div class="row mt-3">
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                    <!-- Content -->
-                    <h6 class="text-uppercase font-weight-bold">Company name</h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate necessitatibus
-                        reprehenderit voluptatibus cumque quisquam?</p>
-                </div>
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Products</h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-
-                </div>
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-                    <p>
-                        <a href="#!">Lorem ipsum dolor</a>
-                    </p>
-
-                </div>
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <i class="fas fa-home mr-3"></i> Lorem, LA 10012, HH</p>
-                    <p>
-                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                    <p>
-                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p>
-                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="#"> loremipsum.com</a>
-        </div>
-    </footer> <!-- Optional JavaScript -->
-    <script src="/js/main.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+    <!-- FOOTER -->
+    <footer></footer>
 </body>
 
 </html>
