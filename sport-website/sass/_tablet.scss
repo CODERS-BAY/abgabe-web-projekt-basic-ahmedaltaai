@@ -1,11 +1,105 @@
-@media (max-width: 43em) {
+@media (min-width: 43em) {
     .navbar {
-        background-color: #333 !important;
+        background-color: red !important;
     }
 
-    .article {
-        display: flex;
+    .showcase {
 
 
+        .showcase {
+
+            @include set-background(#f4f4f4);
+
+            &__content {
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                padding: 1em;
+
+                h1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .article {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2em;
+                    height: 100vh;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        padding: 0em;
+                        position: relative;
+                        z-index: 1;
+                        box-shadow: 1em 1em 2em $primary-color;
+                    }
+
+                    .image {
+                        position: relative;
+
+                        width: 100%;
+                        padding: 2em;
+                    }
+
+                    .image::after {
+                        content: "";
+                        height: 20em;
+                        width: 28em;
+                        //background-color: $secondary-color;
+                        position: absolute;
+                        bottom: 0em;
+                        right: 0em;
+                    }
+
+                    .text {
+                        line-height: 1.5;
+                        font-size: 0.8em;
+                        width: 70%;
+
+                        p {
+                            margin: 1em 0;
+                            position: relative;
+                            z-index: 1;
+
+                            span {
+                                padding: 1em 0;
+                            }
+                        }
+
+                        p::after {
+                            content: "";
+                            height: 6em;
+                            width: 20em;
+                            background-color: $secondary-color;
+                            position: absolute;
+                            bottom: -1em;
+                            right: 0em;
+                            z-index: -1;
+                        }
+                    }
+                }
+
+                .quote {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    background-color: #fff;
+                    height: 25vh;
+                    padding: 2em;
+                }
+            }
+        }
     }
+
+
 }
