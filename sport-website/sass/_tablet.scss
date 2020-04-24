@@ -101,5 +101,18 @@
         }
     }
 
+    .showcase-gallary {
+        margin-top: 1em;
+
+        .three-piece {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .two-piece {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
 }
