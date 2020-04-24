@@ -10,32 +10,6 @@ header {
     padding: 4em 1em;
     text-align: center;
 
-    .logo-inside {
-        background-image: url("../images/logo.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 64px;
-        height: 64px;
-        position: absolute;
-        top: 0.6em;
-        left: 1.25em;
-        z-index: 9999;
-    }
-
-    .main-logo {
-        background-image: url("../images/logo.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 64px;
-        height: 64px;
-        position: absolute;
-        top: 0.6em;
-        left: 1.25em;
-        z-index: 9999;
-    }
-
     .toggle {
         background-color: $secondary-color;
         border: 0;

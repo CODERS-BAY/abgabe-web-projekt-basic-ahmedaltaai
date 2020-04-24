@@ -1,11 +1,16 @@
 body {
-    max-width: 1200px;
+
     width: 100%;
+
+    transition: transform 0.5s ease;
+}
+
+.showcase {
+    max-width: 80em;
     margin: 0 auto;
 
-    transition: transform 0.3s ease;
 }
 
 body.show-nav {
-    transform: translateX(-20em);
+    transform: translateX(-50%);
 }

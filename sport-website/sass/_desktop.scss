@@ -1,27 +1,30 @@
 @media (min-width: 62em) {
 
     .navbar {
-        height: 2em;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
-        padding: 0em;
-        width: 100%;
-        max-width: 1200px;
-        transform: none;
-        position: relative;
-        top: 0em;
-        left: 1.25em;
 
         ul {
+            position: absolute;
             list-style-type: none;
             display: flex;
             flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            height: 0;
+            font-size: 1em;
+            padding: 1em 0em;
+            transform: translateX(0);
+            width: 100%;
+            top: 1em;
+
+            background-color: $primary-color;
         }
 
         li {
-            padding: 1em;
-            text-align: end;
+            padding: 1.25em;
+            text-align: center;
         }
 
         a {
@@ -30,26 +33,36 @@
         }
 
         a:hover {
-            color: $secondary-color;
+            color: $quinary-color;
+        }
+
+        .main-logo {
+            background-image: url("../images/logo.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 64px;
+            height: 64px;
+
         }
     }
 
     header {
-        top: -2.3em;
+        padding: 0em 4em;
+
+        .header-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .header-text {
+                padding: 10em 0;
+                color: #fff;
+                width: 50%;
+            }
+        }
 
         .toggle {
-            display: none;
-        }
-
-        .main-logo {
-            top: 3.2em;
-            left: 3.45em;
-
-        }
-
-        .logo-inside {
-            top: 0em;
-            left: 1.25em;
             display: none;
         }
     }
@@ -79,8 +92,6 @@
             align-items: center;
             width: 90%;
         }
-
-        .image-container:hover {}
 
         img {
             width: 100%;
