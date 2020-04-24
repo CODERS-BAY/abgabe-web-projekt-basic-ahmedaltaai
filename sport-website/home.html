@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
 <body>
+
     <header>
         <nav class="navbar">
-            <div class="logo"></div>
+            <div class="logo-inside"></div>
             <ul class="navbar__list">
                 <li><a href="home.html" class="navbar__links">Home</a></li>
                 <li><a href="gallary.html" class="navbar__links">gallary</a></li>
@@ -19,11 +22,19 @@
                 <li><a href="four.html" class="navbar__links">four</a></li>
             </ul>
         </nav>
+        <div class="main-logo"></div>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Jetzt! Gesünder sein</h1>
+        <p>
+            In welchem körperlichen Zustand oder Alter auch immer du bist – es ist nie zu spät anzufangen!
+        </p>
     </header>
 
     <main class="showcase">
         <section class="showcase__content">
-            <h1>Jetzt! Gesünder sein</h1>
+
             <!-- ARTICLE -->
             <article class="article">
                 <div class="text">
@@ -42,8 +53,8 @@
 
             <!-- QUOTE -->
             <article class="quote">
-                <p>"If it doesn´t challenge you, it doesn´t change you."</p>
-                <p>— Fred Devito</p>
+                <p class="animated_text">"If it doesn´t challenge you, it doesn´t change you."</p>
+                <p class="animated_text">— Fred Devito</p>
             </article>
 
             <!-- ARTICLE -->
@@ -67,8 +78,8 @@
 
             <!-- QUOTE -->
             <article class="quote">
-                <p>"Eine winzige Veränderung heute bringt ein dramatisch Verändertes morgen."</p>
-                <p>— Richard Bach</p>
+                <p class="animated_text">"Eine winzige Veränderung heute bringt ein dramatisch Verändertes morgen."</p>
+                <p class="animated_text">— Richard Bach</p>
             </article>
 
             <!-- ARTICLE -->
@@ -90,8 +101,8 @@
 
             <!-- QUOTE -->
             <article class="quote">
-                <p>"Sometimes life hits you in the head with a brick. Don’t lose faith."</p>
-                <p>— Steve Jobs</p>
+                <p class="animated_text">"Sometimes life hits you in the head with a brick. Don’t lose faith."</p>
+                <p class="animated_text">— Steve Jobs</p>
             </article>
 
             <!-- ARTICLE -->
@@ -111,23 +122,15 @@
 
             <!-- QUOTE -->
             <article class="quote">
-                <p>"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren."</p>
-                <p>— Bertolt Brecht</p>
-            </article>
-
-            <!-- ARTICLE -->
-            <article class="article">
-                <div class="text">
-                    <h1>
-                        In welchem körperlichen Zustand oder Alter auch immer du bist – es ist nie zu spät anzufangen!
-                    </h1>
-                </div>
+                <p class="animated_text">"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren."</p>
+                <p class="animated_text">— Bertolt Brecht</p>
             </article>
         </section>
     </main>
 
     <!-- FOOTER -->
     <footer>footer</footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

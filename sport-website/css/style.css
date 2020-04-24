@@ -9,50 +9,113 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-header .navbar {
-  height: 3em;
+body.show-nav {
+  -webkit-transform: translateX(-20em);
+          transform: translateX(-20em);
+}
+
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 1em;
-  background-color: #ccc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  padding: 3em;
+  width: 20em;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+  -webkit-transform: translateX(20em);
+          transform: translateX(20em);
 }
 
-header .navbar ul {
+.navbar ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-header .navbar li {
-  padding: 0 1em;
+.navbar li {
+  padding: 1em;
+  text-align: center;
 }
 
-header .navbar .logo {
+.navbar a {
+  text-decoration: none;
+  color: #378966;
+}
+
+.navbar a:hover {
+  color: #8FC5AE;
+}
+
+header {
+  background-color: #378966;
+  color: #fff;
+  font-size: 130%;
+  position: relative;
+  padding: 4em 1em;
+  text-align: center;
+}
+
+header .logo-inside {
   background-image: url("../images/logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 64px;
   height: 64px;
+  position: absolute;
+  top: 0.6em;
+  left: 1.25em;
+  z-index: 9999;
 }
 
-header a {
-  text-decoration: none;
-  color: #378966;
+header .main-logo {
+  background-image: url("../images/logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 0.6em;
+  left: 1.25em;
+  z-index: 9999;
 }
 
-header a:hover {
-  color: #8FC5AE;
+header .toggle {
+  background-color: #8FC5AE;
+  border: 0;
+  border-radius: 0.4em;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.7em 0.9em;
+  position: absolute;
+  top: 1.25em;
+  right: 1.25em;
+}
+
+header .toggle:focus {
+  outline: none;
+}
+
+header p {
+  margin: 2em auto;
 }
 
 .showcase {
@@ -204,19 +267,6 @@ footer {
   justify-items: center;
 }
 
-.showcase-gallary .three-piece__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 20em;
-}
-
 .showcase-gallary .two-piece {
   display: -ms-grid;
   display: grid;
@@ -227,7 +277,7 @@ footer {
   margin: 1em 0;
 }
 
-.showcase-gallary .two-piece__img {
+.showcase-gallary .image-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,7 +287,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20em;
+  width: 90%;
 }
 
 .showcase-gallary img {
@@ -248,14 +298,11 @@ footer {
 }
 
 @media (min-width: 43em) {
-  .navbar {
-    background-color: red !important;
-  }
-  .showcase .showcase {
+  .showcase {
     background-color: #f4f4f4;
     color: #333;
   }
-  .showcase .showcase__content {
+  .showcase__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -271,7 +318,7 @@ footer {
     text-align: center;
     padding: 1em;
   }
-  .showcase .showcase__content h1 {
+  .showcase__content h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -282,7 +329,7 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
-  .showcase .showcase__content .article {
+  .showcase__content .article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -300,7 +347,7 @@ footer {
     height: 100vh;
     width: 100%;
   }
-  .showcase .showcase__content .article img {
+  .showcase__content .article img {
     width: 100%;
     height: auto;
     padding: 0em;
@@ -309,12 +356,12 @@ footer {
     -webkit-box-shadow: 1em 1em 2em #378966;
             box-shadow: 1em 1em 2em #378966;
   }
-  .showcase .showcase__content .article .image {
+  .showcase__content .article .image {
     position: relative;
     width: 100%;
     padding: 2em;
   }
-  .showcase .showcase__content .article .image::after {
+  .showcase__content .article .image::after {
     content: "";
     height: 20em;
     width: 28em;
@@ -322,20 +369,20 @@ footer {
     bottom: 0em;
     right: 0em;
   }
-  .showcase .showcase__content .article .text {
+  .showcase__content .article .text {
     line-height: 1.5;
     font-size: 0.8em;
     width: 70%;
   }
-  .showcase .showcase__content .article .text p {
+  .showcase__content .article .text p {
     margin: 1em 0;
     position: relative;
     z-index: 1;
   }
-  .showcase .showcase__content .article .text p span {
+  .showcase__content .article .text p span {
     padding: 1em 0;
   }
-  .showcase .showcase__content .article .text p::after {
+  .showcase__content .article .text p::after {
     content: "";
     height: 6em;
     width: 20em;
@@ -345,7 +392,7 @@ footer {
     right: 0em;
     z-index: -1;
   }
-  .showcase .showcase__content .quote {
+  .showcase__content .article .quote {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -367,19 +414,121 @@ footer {
   .showcase-gallary .three-piece {
     display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    justify-items: center;
+  }
+  .showcase-gallary .two-piece {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    justify-items: center;
+    margin: 1em 0;
+  }
+  .showcase-gallary img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media (min-width: 62em) {
+  .navbar {
+    height: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0em;
+    width: 100%;
+    max-width: 1200px;
+    -webkit-transform: none;
+            transform: none;
+    position: relative;
+    top: 0em;
+    left: 1.25em;
+  }
+  .navbar ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .navbar li {
+    padding: 1em;
+    text-align: end;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .navbar a:hover {
+    color: #8FC5AE;
+  }
+  header {
+    top: -2.3em;
+  }
+  header .toggle {
+    display: none;
+  }
+  header .main-logo {
+    top: 3.2em;
+    left: 3.45em;
+  }
+  header .logo-inside {
+    top: 0em;
+    left: 1.25em;
+    display: none;
+  }
+  .showcase-gallary {
+    margin-top: 1em;
+  }
+  .showcase-gallary .three-piece {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    justify-items: center;
   }
   .showcase-gallary .two-piece {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    justify-items: center;
+    margin: 1em 0;
   }
-}
-
-@media (min-width: 62em) {
-  .navbar {
-    background-color: yellow !important;
+  .showcase-gallary .image-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+  }
+  .showcase-gallary img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }

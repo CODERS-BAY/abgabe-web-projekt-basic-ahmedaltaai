@@ -1,42 +1,61 @@
 @import "config";
 @import "utilities";
+@import "navbar";
 
 header {
-    .navbar {
-        height: 3em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1em;
+    background-color: $primary-color;
+    color: #fff;
+    font-size: 130%;
+    position: relative;
+    padding: 4em 1em;
+    text-align: center;
 
-        background-color: #ccc;
-
-        ul {
-            list-style-type: none;
-            display: flex;
-        }
-
-        li {
-            padding: 0 1em;
-        }
-
-        .logo {
-            background-image: url("../images/logo.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 64px;
-            height: 64px;
-        }
+    .logo-inside {
+        background-image: url("../images/logo.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: 0.6em;
+        left: 1.25em;
+        z-index: 9999;
     }
 
-    a {
-        text-decoration: none;
-        color: $primary-color;
+    .main-logo {
+        background-image: url("../images/logo.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: 0.6em;
+        left: 1.25em;
+        z-index: 9999;
     }
 
-    a:hover {
-        color: $secondary-color;
+    .toggle {
+        background-color: $secondary-color;
+        border: 0;
+        border-radius: 0.4em;
+        color: #fff;
+        cursor: pointer;
+        padding: 0.7em 0.9em;
+
+        position: absolute;
+        top: 1.25em;
+        right: 1.25em;
+    }
+
+    .toggle:focus {
+        outline: none;
+    }
+
+
+    p {
+        margin: 2em auto;
     }
 }
 

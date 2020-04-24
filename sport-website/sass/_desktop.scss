@@ -1,5 +1,91 @@
 @media (min-width: 62em) {
+
     .navbar {
-        background-color: yellow !important;
+        height: 2em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0em;
+        width: 100%;
+        max-width: 1200px;
+        transform: none;
+        position: relative;
+        top: 0em;
+        left: 1.25em;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        li {
+            padding: 1em;
+            text-align: end;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+
+    header {
+        top: -2.3em;
+
+        .toggle {
+            display: none;
+        }
+
+        .main-logo {
+            top: 3.2em;
+            left: 3.45em;
+
+        }
+
+        .logo-inside {
+            top: 0em;
+            left: 1.25em;
+            display: none;
+        }
+    }
+
+    .showcase-gallary {
+
+        margin-top: 1em;
+
+        .three-piece {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            justify-items: center;
+        }
+
+        .two-piece {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+            justify-items: center;
+            margin: 1em 0;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+        }
+
+        .image-container:hover {}
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
     }
 }

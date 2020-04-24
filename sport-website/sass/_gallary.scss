@@ -7,13 +7,6 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 1em;
         justify-items: center;
-
-        &__img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 20em;
-        }
     }
 
     .two-piece {
@@ -22,14 +15,16 @@
         gap: 1em;
         justify-items: center;
         margin: 1em 0;
-
-        &__img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 20em;
-        }
     }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .image-container:hover {}
 
     img {
         width: 100%;
