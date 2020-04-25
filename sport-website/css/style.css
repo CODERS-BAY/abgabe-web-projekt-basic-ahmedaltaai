@@ -254,15 +254,16 @@ footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 100%;
   width: 30em;
+  max-width: 100%;
+  max-height: 100%;
   -webkit-animation-name: modalopen;
           animation-name: modalopen;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
 
-.modal-container .modal-header {
+.modal-container .modal-title {
   background-color: #378966;
   color: #fff;
   padding: 1em;
@@ -270,11 +271,11 @@ footer {
   border-radius: 0.4em;
 }
 
-.modal-container .modal-content {
+.modal-container .modal-body {
   padding: 1.6em;
 }
 
-.modal-container .modal-content p {
+.modal-container .modal-body p {
   line-height: 1.5;
 }
 
@@ -285,7 +286,13 @@ footer {
   top: 0.25em;
   right: 0.3em;
   border: none;
+  color: #8FC5AE;
+}
+
+.modal-container .close-btn:hover {
   color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 @-webkit-keyframes modalopen {
@@ -580,8 +587,8 @@ footer {
   .showcase-gallary .three-piece {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (minmax(375px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     justify-items: center;
   }
   .showcase-gallary .four-piece {
