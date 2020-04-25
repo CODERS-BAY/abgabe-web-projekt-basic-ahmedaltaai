@@ -85,6 +85,7 @@
         @include set-background(#f4f4f4);
         width: 100%;
         max-width: 80em;
+        margin: 0 auto;
 
         &__content {
 
@@ -129,6 +130,7 @@
                 background-color: #fff;
                 height: 25vh;
                 padding: 2em;
+                font-size: 2em;
             }
         }
     }
@@ -138,6 +140,7 @@
         @include set-background(#f4f4f4);
         margin: 0 auto;
         max-width: 80em;
+        width: 100%;
 
         .three-piece {
             display: grid;
@@ -151,19 +154,11 @@
             justify-items: center;
         }
 
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-
-            img {
-                width: 375px;
-                height: 250px;
-                object-fit: cover;
-                object-position: center;
-
-            }
+        img {
+            width: 375px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
         }
     }
 }

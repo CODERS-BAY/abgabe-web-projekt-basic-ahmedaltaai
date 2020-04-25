@@ -14,9 +14,10 @@
             padding: 1em;
 
             .article {
-                
+
 
                 .text {
+                    font-size: 1.3em;
 
                     p {
                         margin: 1em 0;
@@ -39,6 +40,10 @@
                         z-index: -1;
                     }
                 }
+            }
+
+            .quote {
+                font-size: 1.4em;
             }
         }
     }

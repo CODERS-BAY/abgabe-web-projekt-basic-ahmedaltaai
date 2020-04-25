@@ -30,6 +30,7 @@ header {
 
     p {
         margin: 2em auto;
+        line-height: 1.5;
     }
 
     .header-items {
@@ -96,7 +97,7 @@ header {
 
             .text {
                 line-height: 1.5;
-                font-size: 1.2em;
+                font-size: 1em;
                 width: 80%;
 
                 p {
@@ -130,6 +131,7 @@ header {
             background-color: #fff;
             height: 25vh;
             padding: 2em;
+            font-size: 1em;
         }
     }
 }
@@ -144,6 +146,7 @@ footer {
     color: #fff;
 }
 
+@import "modal";
 @import "gallary";
 @import "buttons";
 @import "tablet";

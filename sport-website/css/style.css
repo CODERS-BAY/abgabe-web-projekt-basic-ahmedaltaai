@@ -12,6 +12,7 @@ body {
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 body.show-nav {
@@ -90,6 +91,7 @@ header .toggle:focus {
 
 header p {
   margin: 2em auto;
+  line-height: 1.5;
 }
 
 header .header-items img {
@@ -174,7 +176,7 @@ header .header-items img {
 
 .showcase__content .article .text {
   line-height: 1.5;
-  font-size: 1.2em;
+  font-size: 1em;
   width: 80%;
 }
 
@@ -214,6 +216,7 @@ header .header-items img {
   background-color: #fff;
   height: 25vh;
   padding: 2em;
+  font-size: 1em;
 }
 
 footer {
@@ -229,6 +232,82 @@ footer {
   height: 20em;
   background-color: black;
   color: #fff;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container .modal {
+  background-color: #fff;
+  border-radius: .4em;
+  -webkit-box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 30em;
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.modal-container .modal-header {
+  background-color: #378966;
+  color: #fff;
+  padding: 1em;
+  border-bottom: 0.1em solid #8FC5AE;
+  border-radius: 0.4em;
+}
+
+.modal-container .modal-content {
+  padding: 1.6em;
+}
+
+.modal-container .modal-content p {
+  line-height: 1.5;
+}
+
+.modal-container .close-btn {
+  background: transparent;
+  font-size: 2em;
+  position: absolute;
+  top: 0.25em;
+  right: 0.3em;
+  border: none;
+  color: #fff;
+}
+
+@-webkit-keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-container.show-modal {
+  display: block;
 }
 
 .showcase-gallary {
@@ -294,6 +373,9 @@ footer {
     text-align: center;
     padding: 1em;
   }
+  .showcase__content .article .text {
+    font-size: 1.3em;
+  }
   .showcase__content .article .text p {
     margin: 1em 0;
     position: relative;
@@ -311,6 +393,9 @@ footer {
     bottom: -1em;
     right: 0em;
     z-index: -1;
+  }
+  .showcase__content .quote {
+    font-size: 1.4em;
   }
   .showcase-gallary {
     margin-top: 1em;
@@ -431,6 +516,7 @@ footer {
     color: #333;
     width: 100%;
     max-width: 80em;
+    margin: 0 auto;
   }
   .showcase__content .article {
     display: -webkit-box;
@@ -482,12 +568,14 @@ footer {
     background-color: #fff;
     height: 25vh;
     padding: 2em;
+    font-size: 2em;
   }
   .showcase-gallary {
     background-color: #f4f4f4;
     color: #333;
     margin: 0 auto;
     max-width: 80em;
+    width: 100%;
   }
   .showcase-gallary .three-piece {
     display: -ms-grid;
@@ -503,19 +591,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
-  .showcase-gallary .image-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 90%;
-  }
-  .showcase-gallary .image-container img {
+  .showcase-gallary img {
     width: 375px;
     height: 250px;
     -o-object-fit: cover;
