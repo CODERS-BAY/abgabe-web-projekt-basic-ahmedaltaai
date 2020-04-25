@@ -13,51 +13,10 @@
             text-align: center;
             padding: 1em;
 
-            h1 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
             .article {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 2em;
-                height: 100vh;
-                width: 100%;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                    padding: 0em;
-                    position: relative;
-                    z-index: 1;
-                    box-shadow: 1em 1em 2em $primary-color;
-                }
-
-                .image {
-                    position: relative;
-
-                    width: 100%;
-                    padding: 2em;
-                }
-
-                .image::after {
-                    content: "";
-                    height: 20em;
-                    width: 28em;
-                    //background-color: $secondary-color;
-                    position: absolute;
-                    bottom: 0em;
-                    right: 0em;
-                }
+                
 
                 .text {
-                    line-height: 1.5;
-                    font-size: 0.8em;
-                    width: 70%;
 
                     p {
                         margin: 1em 0;
@@ -71,7 +30,7 @@
 
                     p::after {
                         content: "";
-                        height: 6em;
+                        height: 5em;
                         width: 20em;
                         background-color: $secondary-color;
                         position: absolute;
@@ -79,16 +38,6 @@
                         right: 0em;
                         z-index: -1;
                     }
-                }
-
-                .quote {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    background-color: #fff;
-                    height: 25vh;
-                    padding: 2em;
                 }
             }
         }
@@ -119,5 +68,4 @@
             object-fit: contain;
         }
     }
-
 }

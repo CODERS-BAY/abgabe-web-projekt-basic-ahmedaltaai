@@ -1,14 +1,7 @@
 body {
-
     width: 100%;
-
-    transition: transform 0.5s ease;
-}
-
-.showcase {
-    max-width: 80em;
+    transition: transform .5s ease;
     margin: 0 auto;
-
 }
 
 body.show-nav {

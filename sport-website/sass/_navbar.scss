@@ -41,7 +41,8 @@
     }
 
     a:hover {
-        color: $quinary-color;
+        color: $hover-color;
+        transition: .2s ease;
     }
 
     .main-logo {

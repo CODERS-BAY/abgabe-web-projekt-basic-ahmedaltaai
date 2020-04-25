@@ -18,6 +18,7 @@
             transform: translateX(0);
             width: 100%;
             top: 1em;
+            right: 2em;
 
             background-color: $primary-color;
         }
@@ -33,7 +34,8 @@
         }
 
         a:hover {
-            color: $quinary-color;
+            color: $hover-color;
+            transition: .2s ease;
         }
 
         .main-logo {
@@ -43,6 +45,8 @@
             background-repeat: no-repeat;
             width: 64px;
             height: 64px;
+            left: 3em;
+
 
         }
     }
@@ -65,25 +69,86 @@
         .toggle {
             display: none;
         }
+
+        .header-items {
+
+            img {
+                display: block;
+                height: 30%;
+                width: 30%;
+            }
+        }
+    }
+
+    .showcase {
+
+        @include set-background(#f4f4f4);
+        width: 100%;
+        max-width: 80em;
+
+        &__content {
+
+            .article {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .text {
+                    line-height: 1.5;
+                    font-size: 1.4em;
+                    width: 80%;
+
+                    p {
+                        margin: 1em 0;
+                        position: relative;
+                        z-index: 1;
+
+                        span {
+                            padding: 1em 0;
+                        }
+                    }
+
+                    p::after {
+                        content: "";
+                        height: 5em;
+                        width: 15em;
+                        background-color: $secondary-color;
+                        position: absolute;
+                        bottom: -1em;
+                        right: 0em;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            .quote {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                background-color: #fff;
+                height: 25vh;
+                padding: 2em;
+            }
+        }
     }
 
     .showcase-gallary {
 
-        margin-top: 1em;
+        @include set-background(#f4f4f4);
+        margin: 0 auto;
+        max-width: 80em;
 
         .three-piece {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1em;
             justify-items: center;
         }
 
-        .two-piece {
+        .four-piece {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1em;
             justify-items: center;
-            margin: 1em 0;
         }
 
         .image-container {
@@ -91,12 +156,14 @@
             justify-content: center;
             align-items: center;
             width: 90%;
-        }
 
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
+            img {
+                width: 375px;
+                height: 250px;
+                object-fit: cover;
+                object-position: center;
+
+            }
         }
     }
 }

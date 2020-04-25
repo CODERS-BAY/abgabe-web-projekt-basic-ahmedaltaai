@@ -7,14 +7,10 @@
 
 body {
   width: 100%;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-.showcase {
-  max-width: 80em;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
   margin: 0 auto;
 }
 
@@ -49,7 +45,9 @@ body.show-nav {
 }
 
 .navbar a:hover {
-  color: #085333;
+  color: #E7724A;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 
 .navbar .main-logo {
@@ -94,6 +92,10 @@ header p {
   margin: 2em auto;
 }
 
+header .header-items img {
+  display: none;
+}
+
 .showcase {
   background-color: #f4f4f4;
   color: #333;
@@ -136,9 +138,8 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -147,19 +148,19 @@ header p {
   width: 100%;
 }
 
-.showcase__content .article img {
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 1;
-  -webkit-box-shadow: 1em 1em 2em #378966;
-          box-shadow: 1em 1em 2em #378966;
-}
-
 .showcase__content .article .image {
   position: relative;
   width: 100%;
   padding: 2em;
+}
+
+.showcase__content .article .image img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0.3em 0.3em 0.7em #378966;
+          box-shadow: 0.3em 0.3em 0.7em #378966;
 }
 
 .showcase__content .article .image::after {
@@ -173,8 +174,8 @@ header p {
 
 .showcase__content .article .text {
   line-height: 1.5;
-  font-size: 0.8em;
-  width: 50%;
+  font-size: 1.2em;
+  width: 80%;
 }
 
 .showcase__content .article .text p {
@@ -189,8 +190,8 @@ header p {
 
 .showcase__content .article .text p::after {
   content: "";
-  height: 5em;
-  width: 20em;
+  height: 4em;
+  width: 15em;
   background-color: #8FC5AE;
   position: absolute;
   bottom: -1em;
@@ -231,7 +232,8 @@ footer {
 }
 
 .showcase-gallary {
-  margin-top: 1em;
+  width: 100%;
+  max-width: 80em;
 }
 
 .showcase-gallary .three-piece {
@@ -239,18 +241,15 @@ footer {
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  gap: 1em;
   justify-items: center;
 }
 
-.showcase-gallary .two-piece {
+.showcase-gallary .four-piece {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  gap: 1em;
   justify-items: center;
-  margin: 1em 0;
 }
 
 .showcase-gallary .image-container {
@@ -271,6 +270,7 @@ footer {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  padding: 1em;
 }
 
 @media (min-width: 43em) {
@@ -294,62 +294,6 @@ footer {
     text-align: center;
     padding: 1em;
   }
-  .showcase__content h1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .showcase__content .article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 2em;
-    height: 100vh;
-    width: 100%;
-  }
-  .showcase__content .article img {
-    width: 100%;
-    height: auto;
-    padding: 0em;
-    position: relative;
-    z-index: 1;
-    -webkit-box-shadow: 1em 1em 2em #378966;
-            box-shadow: 1em 1em 2em #378966;
-  }
-  .showcase__content .article .image {
-    position: relative;
-    width: 100%;
-    padding: 2em;
-  }
-  .showcase__content .article .image::after {
-    content: "";
-    height: 20em;
-    width: 28em;
-    position: absolute;
-    bottom: 0em;
-    right: 0em;
-  }
-  .showcase__content .article .text {
-    line-height: 1.5;
-    font-size: 0.8em;
-    width: 70%;
-  }
   .showcase__content .article .text p {
     margin: 1em 0;
     position: relative;
@@ -360,29 +304,13 @@ footer {
   }
   .showcase__content .article .text p::after {
     content: "";
-    height: 6em;
+    height: 5em;
     width: 20em;
     background-color: #8FC5AE;
     position: absolute;
     bottom: -1em;
     right: 0em;
     z-index: -1;
-  }
-  .showcase__content .article .quote {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    background-color: #fff;
-    height: 25vh;
-    padding: 2em;
   }
   .showcase-gallary {
     margin-top: 1em;
@@ -447,6 +375,7 @@ footer {
             transform: translateX(0);
     width: 100%;
     top: 1em;
+    right: 2em;
     background-color: #378966;
   }
   .navbar li {
@@ -458,7 +387,9 @@ footer {
     color: #fff;
   }
   .navbar a:hover {
-    color: #085333;
+    color: #E7724A;
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
   }
   .navbar .main-logo {
     background-image: url("../images/logo.png");
@@ -467,6 +398,7 @@ footer {
     background-repeat: no-repeat;
     width: 64px;
     height: 64px;
+    left: 3em;
   }
   header {
     padding: 0em 4em;
@@ -489,25 +421,87 @@ footer {
   header .toggle {
     display: none;
   }
+  header .header-items img {
+    display: block;
+    height: 30%;
+    width: 30%;
+  }
+  .showcase {
+    background-color: #f4f4f4;
+    color: #333;
+    width: 100%;
+    max-width: 80em;
+  }
+  .showcase__content .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .showcase__content .article .text {
+    line-height: 1.5;
+    font-size: 1.4em;
+    width: 80%;
+  }
+  .showcase__content .article .text p {
+    margin: 1em 0;
+    position: relative;
+    z-index: 1;
+  }
+  .showcase__content .article .text p span {
+    padding: 1em 0;
+  }
+  .showcase__content .article .text p::after {
+    content: "";
+    height: 5em;
+    width: 15em;
+    background-color: #8FC5AE;
+    position: absolute;
+    bottom: -1em;
+    right: 0em;
+    z-index: -1;
+  }
+  .showcase__content .quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    height: 25vh;
+    padding: 2em;
+  }
   .showcase-gallary {
-    margin-top: 1em;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0 auto;
+    max-width: 80em;
   }
   .showcase-gallary .three-piece {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
     justify-items: center;
   }
-  .showcase-gallary .two-piece {
+  .showcase-gallary .four-piece {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
     justify-items: center;
-    margin: 1em 0;
   }
   .showcase-gallary .image-container {
     display: -webkit-box;
@@ -521,10 +515,12 @@ footer {
             align-items: center;
     width: 90%;
   }
-  .showcase-gallary img {
-    width: 100%;
-    height: auto;
-    -o-object-fit: contain;
-       object-fit: contain;
+  .showcase-gallary .image-container img {
+    width: 375px;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
 }

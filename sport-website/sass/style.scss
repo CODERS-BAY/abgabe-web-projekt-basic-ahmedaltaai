@@ -31,6 +31,13 @@ header {
     p {
         margin: 2em auto;
     }
+
+    .header-items {
+
+        img {
+            display: none;
+        }
+    }
 }
 
 .showcase {
@@ -55,25 +62,26 @@ header {
         .article {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             padding: 2em;
             height: 100vh;
             width: 100%;
 
-            img {
-                width: 100%;
-                height: auto;
-                position: relative;
-                z-index: 1;
-                box-shadow: 1em 1em 2em $primary-color;
-            }
+
 
             .image {
                 position: relative;
-
                 width: 100%;
                 padding: 2em;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    z-index: 1;
+                    box-shadow: 0.3em 0.3em 0.7em $primary-color;
+                }
             }
 
             .image::after {
@@ -88,8 +96,8 @@ header {
 
             .text {
                 line-height: 1.5;
-                font-size: 0.8em;
-                width: 50%;
+                font-size: 1.2em;
+                width: 80%;
 
                 p {
                     margin: 1em 0;
@@ -103,8 +111,8 @@ header {
 
                 p::after {
                     content: "";
-                    height: 5em;
-                    width: 20em;
+                    height: 4em;
+                    width: 15em;
                     background-color: $secondary-color;
                     position: absolute;
                     bottom: -1em;
