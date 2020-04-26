@@ -214,6 +214,17 @@ header .header-items img {
   height: 25vh;
   padding: 2em;
   font-size: 1em;
+  line-height: 1.5;
+}
+
+.showcase__content .fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+.showcase__content .fade-in.appear {
+  opacity: 1;
 }
 
 footer {

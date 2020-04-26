@@ -301,5 +301,5 @@ faders.forEach((fader) => {
 //   console.log("ID: " + e.id);
 // }
 
-// insert this on the wanted html targe
+// insert this on the wanted html target
 // onclick="printID(this.id);"
