@@ -1,139 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Gallary</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="main-logo"></div>
-            <ul class="navbar__list">
-                <li><a href="home.html" class="navbar__links">Home</a></li>
-                <li><a href="gallary.html" class="navbar__links">Gallary</a></li>
-                <li><a href="tipps.html" class="navbar__links">Tipps</a></li>
-                <li><a href="sportarten.html" class="navbar__links">Sportarten</a></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="main-logo"></div>
+        <ul class="navbar__list">
+          <li><a href="home.html" class="navbar__links">Home</a></li>
+          <li><a href="gallary.html" class="navbar__links">Gallary</a></li>
+          <li><a href="stories.html" class="navbar__links">Stories</a></li>
+          <li>
+            <a href="sportarten.html" class="navbar__links">Sportarten</a>
+          </li>
+        </ul>
+      </nav>
 
-        <button id="toggle" class="toggle">
-            <i class="fa fa-bars fa-2x"></i>
-        </button>
-        <div class="header-items">
-            <img src="./images/jumping_rope.png" alt="">
+      <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+      <div class="header-items">
+        <img src="./images/jumping_rope.png" alt="" />
 
-            <div class="header-text">
-                <h1>Die 20 größten Fitness-Lügen</h1>
-                <p>
-                    Joggen ist schlecht für die Gelenke, Radfahren macht impotent und Krafttraining sorgt für
-                    Bodybuilder-Muskeln? Alles Unsinn! Wir lüften die 20 bekanntesten Fitness-Irrtümer und nehmen so
-                    Ihrem inneren Schweinehund auch die letzte Ausrede, sich vor Bewegung Sport oder dem regelmäßigen
-                    Training zu drücken.
-                </p>
-            </div>
+        <div class="header-text">
+          <h1>Die 20 größten Fitness-Lügen</h1>
+          <p>
+            Joggen ist schlecht für die Gelenke, Radfahren macht impotent und
+            Krafttraining sorgt für Bodybuilder-Muskeln? Alles Unsinn! Wir
+            lüften die 20 bekanntesten Fitness-Irrtümer und nehmen so Ihrem
+            inneren Schweinehund auch die letzte Ausrede, sich vor Bewegung
+            Sport oder dem regelmäßigen Training zu drücken.
+          </p>
         </div>
+      </div>
     </header>
 
     <main class="showcase-gallary">
+      <section class="three-piece">
+        <div class="image-container">
+          <img
+            src="./images/2_unterseite_fotos/punkt-01.jpg"
+            alt=""
+            id="picture01"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="./images/2_unterseite_fotos/punkt-02.jpg"
+            alt=""
+            id="picture02"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="./images/2_unterseite_fotos/punkt-03.jpg"
+            alt=""
+            id="picture03"
+          />
+        </div>
+      </section>
 
-        <section class="three-piece">
-            <div class="image-container" id="firstPicture">
-                <img src="./images/2_unterseite_fotos/punkt-01.jpg" alt="">
-            </div>
-            <div class="image-container" id="secondPicture">
-                <img src="./images/2_unterseite_fotos/punkt-02.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-03.jpg" alt="">
-            </div>
-        </section>
+      <section class="four-piece">
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-04.jpg"
+            alt=""
+            id="picture04"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-05.jpg"
+            alt=""
+            id="picture05"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-06.jpg"
+            alt=""
+            id="picture06"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-07.jpg"
+            alt=""
+            id="picture07"
+          />
+        </div>
+      </section>
 
-        <section class="four-piece">
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-04.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-05.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-06.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-07.jpg" alt="">
-            </div>
-        </section>
+      <section class="three-piece">
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-08.jpg"
+            alt=""
+            id="picture08"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-09.jpg"
+            alt=""
+            id="picture09"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-10.jpg"
+            alt=""
+            id="picture10"
+          />
+        </div>
+      </section>
 
-        <section class="three-piece">
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-08.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-09.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-10.jpg" alt="">
-            </div>
-        </section>
+      <section class="three-piece">
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-11.jpg"
+            alt=""
+            id="picture11"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-12.jpg"
+            alt=""
+            id="picture12"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-13.jpg"
+            alt=""
+            id="picture13"
+          />
+        </div>
+      </section>
 
-        <section class="three-piece">
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-11.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-12.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-13.jpg" alt="">
-            </div>
-        </section>
+      <section class="four-piece">
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-14.jpg"
+            alt=""
+            id="picture14"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-15.jpg"
+            alt=""
+            id="picture15"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-16.jpg"
+            alt=""
+            id="picture16"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-17.jpg"
+            alt=""
+            id="picture17"
+          />
+        </div>
+      </section>
 
-        <section class="four-piece">
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-14.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-15.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-16.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-17.jpg" alt="">
-            </div>
-        </section>
-
-        <section class="three-piece">
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-18.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-19.jpg" alt="">
-            </div>
-            <div class="image-container">
-                <img src="./images/2_unterseite_fotos/punkt-20.jpg" alt="">
-            </div>
-        </section>
+      <section class="three-piece">
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-18.jpg"
+            alt=""
+            id="picture18"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-19.jpg"
+            alt=""
+            id="picture19"
+          />
+        </div>
+        <div class="image-container fade-in">
+          <img
+            src="./images/2_unterseite_fotos/punkt-20.jpg"
+            alt=""
+            id="picture20"
+          />
+        </div>
+      </section>
     </main>
     <!-- FOOTER -->
     <footer>footer</footer>
 
     <!-- MODAL -->
     <section id="modal" class="modal-container">
-        <div class="modal">
-            <button class="close-btn" id="close">
-                <i class="fa fa-times"></i>
-            </button>
-            <div class="modal-title"></div>
-            <div class="modal-body"></div>
-        </div>
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-title"></div>
+        <div class="modal-body"></div>
+      </div>
     </section>
+    <script src="./js/gallary.js"></script>
     <script src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>

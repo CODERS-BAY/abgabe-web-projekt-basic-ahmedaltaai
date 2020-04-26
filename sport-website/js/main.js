@@ -1,51 +1,28 @@
 "use strict";
 
-//grab modal header and modal content
-const modalTitle = document.querySelector(".modal-title");
-const modalBody = document.querySelector(".modal-body");
-
 // grab navbar toggle button – mobile/tablet
 const toggle = document.querySelector(".toggle");
-
-// grab modal close button
-const close = document.getElementById("close");
-
-// grabing pictures to open the modal
-const firstPicture = document.getElementById("firstPicture");
-const secondPicture = document.getElementById("secondPicture");
-
-// eventListiner for opening the modal on the first picture
-function firstPictureModal() {
-  firstPicture.addEventListener("click", () =>
-    modal.classList.add("show-modal")
-  );
-  modalTitle.innerHTML =
-    "<h3>Fettverbrennung beim Sport erst nach 30 Minuten</h3>";
-  modalBody.innerHTML =
-    "<p>Falsch! Bereits ab der ersten Minute Bewegung kurbelt der Körper die Fettverbrennung an. Allerdings hat diese erst nach 30 Minuten ihre Höchstleistung erreicht. Wer also sein Fett wegkriegen möchte, sollte möglichst länger als eine halbe Stunde trainieren. Beim Ausdauersport sollte man es zudem nicht zu ruhig angehen. Am effizientesten funktioniert die Fettverbrennung, wenn man bei 70 bis 80 Prozent seines Maximalpulses trainiert.</p>";
-}
-firstPictureModal();
-
-// eventListiner for opening the modal on the second picture
-function secondPictureModal() {
-  secondPicture.addEventListener("click", () =>
-    modal.classList.add("show-modal")
-  );
-  modalTitle.innerHTML = "<h3>Wer schwitzt, ist nicht fit</h3>";
-  modalBody.innerHTML =
-    "<p>Im Gegenteil: Sportler besitzen eine bessere Thermoregulation. Da ihre Muskeln und Zellen leistungsfähiger sind, geben sie bei Belastung mehr Schweiß ab, als bei unsportlichen Menschen.</p>";
-}
-secondPictureModal();
 
 // toggle navbar – mobile/tablet
 toggle.addEventListener("click", () =>
   document.body.classList.toggle("show-nav")
 );
 
-// eventListiner for modal close
-close.addEventListener("click", () => modal.classList.remove("show-modal"));
+// applying typewritter-effect to the qoutes on the home page
+var i = 0;
+var text01 = '"If it doesn´t challenge you, it doesn´t change you."';
+var text02 =
+  "Eine winzige Veränderung heute bringt ein dramatisch Verändertes morgen.";
+var text03 =
+  "Sometimes life hits you in the head with a brick. Don’t lose faith.";
+var text04 =
+  "Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren.";
 
-// hide modal on outside click
-window.addEventListener("click", (e) =>
-  e.target == modal ? modal.classList.remove("show-modal") : false
-);
+function typing() {
+  if (i < text01.length) {
+    document.querySelector(".animated_text01").innerHTML += text01.charAt(i);
+    i++;
+    setTimeout(typing, 100);
+  }
+}
+typing();

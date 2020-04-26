@@ -1,164 +1,159 @@
 @media (min-width: 62em) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .navbar {
+    ul {
+      position: absolute;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      height: 0;
+      font-size: 1em;
+      padding: 1em 0em;
+      transform: translateX(0);
+      width: 100%;
+      top: 1em;
+      right: 2em;
+
+      background-color: $primary-color;
+    }
+
+    li {
+      padding: 1.25em;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    a:hover {
+      color: $hover-color;
+      transition: 0.2s ease;
+    }
+
+    .main-logo {
+      background-image: url("../images/logo.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 64px;
+      height: 64px;
+      left: 3em;
+    }
+  }
+
+  header {
+    padding: 0em 4em;
+
+    .header-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .header-text {
+        padding: 10em 0;
+        color: #fff;
+        width: 50%;
+      }
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    .header-items {
+      img {
+        display: block;
+        height: 25%;
+        width: 25%;
+      }
+    }
+  }
+
+  .showcase {
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto;
+
+    &__content {
+      .article {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
 
-        ul {
+        .text {
+          line-height: 1.5;
+          font-size: 1.4em;
+          width: 80%;
+
+          p {
+            margin: 1em 0;
+            position: relative;
+            z-index: 1;
+
+            span {
+              padding: 1em 0;
+            }
+          }
+
+          p::after {
+            content: "";
+            height: 5em;
+            width: 15em;
+            background-color: $secondary-color;
             position: absolute;
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            height: 0;
-            font-size: 1em;
-            padding: 1em 0em;
-            transform: translateX(0);
-            width: 100%;
-            top: 1em;
-            right: 2em;
-
-            background-color: $primary-color;
+            bottom: -1em;
+            right: 0em;
+            z-index: -1;
+          }
         }
+      }
 
-        li {
-            padding: 1.25em;
-            text-align: center;
-        }
+      .quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: #fff;
+        height: 25vh;
+        padding: 2em;
+        font-size: 2em;
+      }
+    }
+  }
 
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
+  .showcase-gallary {
+    margin: 0 auto;
+    max-width: 80em;
+    width: 100%;
 
-        a:hover {
-            color: $hover-color;
-            transition: .2s ease;
-        }
-
-        .main-logo {
-            background-image: url("../images/logo.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 64px;
-            height: 64px;
-            left: 3em;
-
-
-        }
+    .three-piece {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+      justify-items: center;
     }
 
-    header {
-        padding: 0em 4em;
-
-        .header-items {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-            .header-text {
-                padding: 10em 0;
-                color: #fff;
-                width: 50%;
-            }
-        }
-
-        .toggle {
-            display: none;
-        }
-
-        .header-items {
-
-            img {
-                display: block;
-                height: 30%;
-                width: 30%;
-            }
-        }
+    .four-piece {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
     }
 
-    .showcase {
-
-        @include set-background(#f4f4f4);
-        width: 100%;
-        max-width: 80em;
-        margin: 0 auto;
-
-        &__content {
-
-            .article {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                .text {
-                    line-height: 1.5;
-                    font-size: 1.4em;
-                    width: 80%;
-
-                    p {
-                        margin: 1em 0;
-                        position: relative;
-                        z-index: 1;
-
-                        span {
-                            padding: 1em 0;
-                        }
-                    }
-
-                    p::after {
-                        content: "";
-                        height: 5em;
-                        width: 15em;
-                        background-color: $secondary-color;
-                        position: absolute;
-                        bottom: -1em;
-                        right: 0em;
-                        z-index: -1;
-                    }
-                }
-            }
-
-            .quote {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                background-color: #fff;
-                height: 25vh;
-                padding: 2em;
-                font-size: 2em;
-            }
-        }
+    .image-container {
+      position: relative;
     }
 
-    .showcase-gallary {
-
-        @include set-background(#f4f4f4);
-        margin: 0 auto;
-        max-width: 80em;
-        width: 100%;
-
-        .three-piece {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-            justify-items: center;
-        }
-
-        .four-piece {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            justify-items: center;
-        }
-
-        img {
-            width: 375px;
-            height: 250px;
-            object-fit: cover;
-            object-position: center;
-        }
+    img {
+      width: 375px;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
     }
+  }
 }

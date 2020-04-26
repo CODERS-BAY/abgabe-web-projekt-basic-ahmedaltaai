@@ -1,0 +1,33 @@
+.articles-container {
+  max-width: 80em;
+  width: 100%;
+  margin: 0 auto;
+
+  .articles-content {
+    padding: 1em;
+
+    .article {
+      margin: 1em 0;
+      box-shadow: 0 0 2px #333;
+      border-radius: 5px;
+
+      .title {
+        padding: 1em 2em 0;
+        color: #333;
+      }
+
+      .body {
+        padding: 1em 3em;
+        line-height: 1.5;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .article:hover {
+    transform: scale(1.2);
+    padding: 3em;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+  }
+}

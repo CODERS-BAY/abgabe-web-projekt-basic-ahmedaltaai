@@ -3,150 +3,144 @@
 @import "navbar";
 
 header {
-    background-color: $primary-color;
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 130%;
+  position: relative;
+  padding: 4em 1em;
+  text-align: center;
+  box-shadow: 0 0 5px #333;
+
+  .toggle {
+    background-color: $secondary-color;
+    border: 0;
+    border-radius: 0.4em;
     color: #fff;
-    font-size: 130%;
-    position: relative;
-    padding: 4em 1em;
-    text-align: center;
+    cursor: pointer;
+    padding: 0.7em 0.9em;
 
-    .toggle {
-        background-color: $secondary-color;
-        border: 0;
-        border-radius: 0.4em;
-        color: #fff;
-        cursor: pointer;
-        padding: 0.7em 0.9em;
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+  }
 
-        position: absolute;
-        top: 1.25em;
-        right: 1.25em;
+  .toggle:focus {
+    outline: none;
+  }
+
+  p {
+    margin: 2em auto;
+    line-height: 1.5;
+  }
+
+  .header-items {
+    img {
+      display: none;
     }
-
-    .toggle:focus {
-        outline: none;
-    }
-
-
-    p {
-        margin: 2em auto;
-        line-height: 1.5;
-    }
-
-    .header-items {
-
-        img {
-            display: none;
-        }
-    }
+  }
 }
 
 .showcase {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
 
-    @include set-background(#f4f4f4);
-
-    &__content {
-
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        padding: 1em;
-
-        h1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .article {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            padding: 2em;
-            height: 100vh;
-            width: 100%;
-
-
-
-            .image {
-                position: relative;
-                width: 100%;
-                padding: 2em;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
-                    z-index: 1;
-                    box-shadow: 0.3em 0.3em 0.7em $primary-color;
-                }
-            }
-
-            .image::after {
-                content: "";
-                height: 20em;
-                width: 28em;
-                //background-color: $secondary-color;
-                position: absolute;
-                bottom: 0em;
-                right: 0em;
-            }
-
-            .text {
-                line-height: 1.5;
-                font-size: 1em;
-                width: 80%;
-
-                p {
-                    margin: 1em 0;
-                    position: relative;
-                    z-index: 1;
-
-                    span {
-                        padding: 1em 0;
-                    }
-                }
-
-                p::after {
-                    content: "";
-                    height: 4em;
-                    width: 15em;
-                    background-color: $secondary-color;
-                    position: absolute;
-                    bottom: -1em;
-                    right: 0em;
-                    z-index: -1;
-                }
-            }
-        }
-
-        .quote {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            background-color: #fff;
-            height: 25vh;
-            padding: 2em;
-            font-size: 1em;
-        }
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2em;
+      height: 100vh;
+      width: 100%;
+
+      .image {
+        position: relative;
+        width: 100%;
+        padding: 2em;
+
+        img {
+          width: 100%;
+          height: auto;
+          position: relative;
+          z-index: 1;
+          box-shadow: 0.3em 0.3em 0.7em $primary-color;
+        }
+      }
+
+      .image::after {
+        content: "";
+        height: 20em;
+        width: 28em;
+        //background-color: $secondary-color;
+        position: absolute;
+        bottom: 0em;
+        right: 0em;
+      }
+
+      .text {
+        line-height: 1.5;
+        font-size: 1em;
+        width: 80%;
+
+        p {
+          margin: 1em 0;
+          position: relative;
+          z-index: 1;
+
+          span {
+            padding: 1em 0;
+          }
+        }
+
+        p::after {
+          content: "";
+          height: 4em;
+          width: 15em;
+          background-color: $secondary-color;
+          position: absolute;
+          bottom: -1em;
+          right: 0em;
+          z-index: -1;
+        }
+      }
+    }
+
+    .quote {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background-color: #fff;
+      height: 25vh;
+      padding: 2em;
+      font-size: 1em;
+    }
+  }
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    height: 20em;
-    background-color: black;
-    color: #fff;
+  height: 20em;
+  background-color: black;
+  color: #fff;
 }
 
 @import "modal";
+@import "articles";
 @import "gallary";
 @import "buttons";
 @import "tablet";

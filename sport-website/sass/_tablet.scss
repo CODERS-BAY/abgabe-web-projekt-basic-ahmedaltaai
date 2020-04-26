@@ -1,76 +1,68 @@
 @media (min-width: 43em) {
+  .showcase {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      padding: 1em;
 
-    .showcase {
+      .article {
+        .text {
+          font-size: 1.3em;
 
-        @include set-background(#f4f4f4);
-
-        &__content {
-
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: center;
-            padding: 1em;
-
-            .article {
-
-
-                .text {
-                    font-size: 1.3em;
-
-                    p {
-                        margin: 1em 0;
-                        position: relative;
-                        z-index: 1;
-
-                        span {
-                            padding: 1em 0;
-                        }
-                    }
-
-                    p::after {
-                        content: "";
-                        height: 5em;
-                        width: 20em;
-                        background-color: $secondary-color;
-                        position: absolute;
-                        bottom: -1em;
-                        right: 0em;
-                        z-index: -1;
-                    }
-                }
-            }
-
-            .quote {
-                font-size: 1.4em;
-            }
-        }
-    }
-
-    .showcase-gallary {
-
-        margin-top: 1em;
-
-        .three-piece {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1em;
-            justify-items: center;
-        }
-
-        .two-piece {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1em;
-            justify-items: center;
+          p {
             margin: 1em 0;
-        }
+            position: relative;
+            z-index: 1;
 
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
+            span {
+              padding: 1em 0;
+            }
+          }
+
+          p::after {
+            content: "";
+            height: 5em;
+            width: 20em;
+            background-color: $secondary-color;
+            position: absolute;
+            bottom: -1em;
+            right: 0em;
+            z-index: -1;
+          }
         }
+      }
+
+      .quote {
+        font-size: 1.4em;
+      }
     }
+  }
+
+  .showcase-gallary {
+    margin-top: 1em;
+
+    .three-piece {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1em;
+      justify-items: center;
+    }
+
+    .two-piece {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1em;
+      justify-items: center;
+      margin: 1em 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
 }
