@@ -25,7 +25,7 @@ function typing() {
   // fading in
   const appearOptions = {
     threshold: 1,
-    rootMargin: "0px 0px -60px 0px",
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const appearOnScroll = new IntersectionObserver(function (
